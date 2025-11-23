@@ -1,0 +1,25 @@
+{
+  "name": "aiii",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fal-ai/client": "^1.7.2",
+    "axios": "^1.13.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "form-data": "^4.0.5",
+    "formdata-node": "^6.0.3",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.9.1",
+    "undici": "^7.16.0"
+  }
+}
