@@ -1,7 +1,11 @@
 import express from "express";
 import axios from "axios";
 import path from "path";
+import dotenv from "dotenv";
 import { fileURLToPath } from "url";
+
+dotenv.config();
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,7 +14,7 @@ const app = express();
 app.use(express.json({ limit: "10mb" }));
 app.use(express.static("public"));
 
-const GEMINI_KEY = "AIzaSyCMnMbx1RZ3b2DKZlAWVZfzsGrSsPOzsuI"; // tera working key
+const GEMINI_KEY = process.env.GEMINI_KEY;
 
 // Gemini call (100% working)
 async function gemini(prompt) {
@@ -145,4 +149,5 @@ app.listen(5000, () => {
   console.log("FULL MVP READY → http://localhost:5000");
   console.log("Notes ✓ Doubt ✓ Summary ✓ Chat ✓ PDF with Watermark ✓");
   console.log("Gemini 2.0 Flash = 1500+ free requests/day");
+
 });
